@@ -1,0 +1,950 @@
+
+/* =========================================
+   GMBRO LAU | FITNESS & TRAINING
+   ========================================= */
+
+
+/* VARIABLES */
+
+:root {
+    --azul: #1685ff;
+    --azul-claro: #4aa8ff;
+    --negro: #080b12;
+    --fondo: #0d121c;
+    --tarjeta: #121a27;
+    --borde: #253246;
+    --texto: #ffffff;
+    --gris: #a8b4c5;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--negro);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 6%;
+
+    background-color: rgba(8, 11, 18, 0.97);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(22, 133, 255, 0.3);
+}
+
+.logo img {
+    width: 85px;
+    height: 75px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #d4dce8;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+}
+
+.nav-btn {
+    padding: 13px 22px;
+
+    background-color: var(--azul);
+    color: white !important;
+
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    background-color: #0066d5;
+}
+
+
+/* =========================================
+   INICIO
+   ========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 18, 0.93),
+            rgba(8, 11, 18, 0.58),
+            rgba(8, 11, 18, 0.20)
+        ),
+        url("/IMAGENES/WhatsApp\ Image\ 2026-11-05\ at\ 2.30.34\ PM.jpeg");
+
+    background-size: cover;
+    background-position: center 45%;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    display: inline-block;
+
+    color: var(--azul-claro);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 85px);
+    font-weight: 900;
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--azul);
+}
+
+.hero p {
+    max-width: 560px;
+
+    color: #d0d8e4;
+
+    font-size: 15px;
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 28px;
+
+    background-color: var(--azul);
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0066d5;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.section-title h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.section-title h2 span {
+    color: var(--azul);
+}
+
+.section-title p {
+    color: var(--gris);
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   POR QUÉ ELEGIRNOS
+   ========================================= */
+
+.nosotros {
+    background-color: var(--negro);
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.nosotros-card {
+    padding: 40px 30px;
+
+    background-color: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.nosotros-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--azul);
+}
+
+.nosotros-card i {
+    color: var(--azul);
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+.nosotros-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.nosotros-card p {
+    color: var(--gris);
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   BENEFICIOS GENERALES
+   ========================================= */
+
+
+   
+.beneficios {
+    background-image:
+        linear-gradient(
+            rgba(8, 11, 18, 0.88),
+            rgba(8, 11, 18, 0.88)
+        ),
+        url("/IMAGENES/WhatsApp\ Image\ 2026-11-05\ at\ 2.36.57\ PM.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.beneficios-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.beneficio {
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.beneficio i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    background-color: rgba(22, 133, 255, 0.12);
+    color: var(--azul);
+
+    border: 1px solid rgba(22, 133, 255, 0.25);
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.beneficio h3 {
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.beneficio p {
+    color: var(--gris);
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MEMBRESÍAS
+   ========================================= */
+
+.planes {
+    background-color: var(--negro);
+}
+
+.planes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.plan {
+    position: relative;
+
+    padding: 40px 30px;
+
+    background-color: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-7px);
+    border-color: var(--azul);
+}
+
+.plan.destacado {
+    background-color: #101d30;
+    border: 1px solid var(--azul);
+
+    box-shadow: 0 0 30px rgba(22, 133, 255, 0.08);
+}
+
+.plan-number {
+    display: block;
+
+    color: var(--azul);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.etiqueta-plan {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+
+    padding: 8px 12px;
+
+    color: white;
+    background-color: var(--azul);
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+}
+
+.plan h3 {
+    font-size: 19px;
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.plan-description {
+    min-height: 45px;
+
+    color: var(--gris);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.precio {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    font-size: 45px;
+    font-weight: 900;
+
+    margin: 25px 0;
+}
+
+.precio span {
+    color: var(--azul);
+
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.precio small {
+    color: var(--gris);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    margin-left: 5px;
+}
+
+.linea {
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--borde);
+
+    margin-bottom: 25px;
+}
+
+.plan ul {
+    list-style: none;
+
+    margin-bottom: 30px;
+}
+
+.plan li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #c3cedd;
+
+    font-size: 11px;
+    line-height: 2.5;
+}
+
+.plan li i {
+    color: var(--azul);
+
+    margin-top: 7px;
+}
+
+.plan-btn {
+    display: block;
+
+    width: 100%;
+    padding: 15px;
+
+    color: white;
+
+    border: 1px solid #364456;
+    border-radius: 4px;
+
+    text-align: center;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.plan-btn:hover {
+    background-color: var(--azul);
+    border-color: var(--azul);
+}
+
+
+/* =========================================
+   BENEFICIOS DE MEMBRESÍA
+   ========================================= */
+
+   
+.incluye {
+    background-image:
+        linear-gradient(
+            rgba(8, 11, 18, 0.88),
+            rgba(8, 11, 18, 0.88)
+        ),
+        url("/IMAGENES/WhatsApp\ Image\ 2026-11-05\ at\ 2.40.17\ PM.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.incluye-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.incluye-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    min-height: 170px;
+    padding: 25px 15px;
+
+    background-color: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.incluye-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul);
+}
+
+.incluye-card i {
+    color: var(--azul);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.incluye-card h3 {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   INSCRIPCIÓN / WHATSAPP
+   ========================================= */
+
+.inscripcion {
+    position: relative;
+
+    padding: 110px 8%;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 10, 18, 0.92),
+            rgba(5, 10, 18, 0.94)
+        ),
+        url("gimnasio.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.inscripcion-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.inscripcion h2 {
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.inscripcion h2 span {
+    color: var(--azul);
+}
+
+.inscripcion p {
+    color: #bdc8d8;
+
+    font-size: 14px;
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    padding: 40px 8% 25px;
+
+    background-color: #060910;
+
+    border-top: 1px solid rgba(22, 133, 255, 0.3);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 25px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #202734;
+}
+
+.footer-top > p {
+    color: var(--azul-claro);
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: white;
+
+    background-color: #121a27;
+    border: 1px solid #263246;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background-color: var(--azul);
+    border-color: var(--azul);
+
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #7e8b9e;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 12px 4%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 75px 5%;
+    }
+
+    .beneficios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .incluye-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .planes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 60px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .nav-btn {
+        padding: 9px 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 60px 6%;
+
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .nosotros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .beneficio {
+        padding: 25px 10px;
+    }
+
+    .beneficio h3 {
+        font-size: 12px;
+    }
+
+    .planes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .plan:last-child {
+        grid-column: auto;
+    }
+
+    .plan {
+        padding: 35px 25px;
+    }
+
+    .incluye-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .incluye-card {
+        min-height: 145px;
+        padding: 20px 10px;
+    }
+
+    .inscripcion {
+        padding: 75px 5%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-top .logo {
+        margin: auto;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================
+   ANIMACIÓN
+   ========================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .hero-content {
+        animation: entrada 1s ease;
+    }
+
+    @keyframes entrada {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+/* ===== HORARIOS ===== */
+
+.horarios {
+    background-color: #080b12;
+    padding: 100px 8%;
+}
+
+.horarios-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 850px;
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+.horario-card {
+    background: #121a27;
+    border: 1px solid #253246;
+    border-radius: 12px;
+    padding: 45px 25px;
+    text-align: center;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.horario-card:hover {
+    transform: translateY(-7px);
+    border-color: #1685ff;
+    box-shadow: 0 10px 30px rgba(22, 133, 255, 0.15);
+}
+
+.horario-card i {
+    color: #1685ff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.horario-card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.horario-card p {
+    color: #4aa8ff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    .horarios-container {
+        grid-template-columns: 1fr;
+    }
+}
+
